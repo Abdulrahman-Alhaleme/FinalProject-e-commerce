@@ -32,7 +32,7 @@ import plus from "./plus.svg";
 import squarePlus from "./square-plus.svg";
 import minus from "./minus.svg";
 import trash from "./trash.svg";
-import hero from "./hero.png";
+import hero from "./hero.jpg";
 import features1 from "../assets/features1.png";
 import features2 from "../assets/features2.png";
 import userImg from "./user.png";

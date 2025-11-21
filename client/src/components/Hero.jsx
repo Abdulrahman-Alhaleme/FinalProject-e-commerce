@@ -5,7 +5,7 @@ import { assets } from "../assets/data";
 const Hero = () => {
   return (
     <section className="max-padd-container">
-      <div className="bg-[url('/src/assets/bg.png')] bg-cover bg-center bg-no-repeat h-[89vh] w-full mt-18 rounded-2xl relative">
+      <div className="bg-[url('/src/assets/bg.jpg')] bg-cover bg-center bg-no-repeat h-[89vh] w-full mt-18 rounded-2xl relative">
         <div className="mx-auto max-w-[1440px] px-4 pt-1 sm:pt-8 flex flex-col justify-between h-full">
           <div className="max-w-3xl">
             <h1 className="h1 !font-[400] capitalize">
