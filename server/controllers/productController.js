@@ -28,12 +28,15 @@ export const createProduct = async (req,res)=>{
 // Controller function for get Product List [GET '/']
 export const listProduct = async (req, res)=>{
     try {
+        console.log("Fetching products from database...")
         const products = await Product.find({})
+        console.log(`Found ${products.length} products`)
         res.json({success:true, products})
 
     } catch (error) {
-         console.log(error.message)
-        res.json({success:false, message: error.message})
+        console.error("❌ Error in listProduct:", error)
+        console.error("Stack trace:", error.stack)
+        res.status(500).json({success:false, message: error.message})
     }
 }
 
