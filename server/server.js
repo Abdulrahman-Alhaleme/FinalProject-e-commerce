@@ -13,8 +13,10 @@ import orderRouter from "./routes/orderRoute.js"
 import { stripeWebhooks } from "./controllers/stripeWebhooks.js"
 
 
-await connectDB() // Establish connection to the database
-await connectCloudinary() // Setup cloudinary for image storage
+// Connect to DB and Cloudinary asynchronously
+// We do not await here to avoid blocking the module load in serverless environments
+connectDB()
+connectCloudinary()
 
 const app = express() // Initialize Express Application
 app.use(cors()) // Enable Cross-Origin Resource sharing
