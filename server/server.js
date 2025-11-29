@@ -50,4 +50,10 @@ if (process.env.NODE_ENV !== 'production') {
     app.listen(port, ()=> console.log(`Server is running at http://localhost:${port}`))
 }
 
+// Global Error Handler
+app.use((err, req, res, next) => {
+  console.error("Global Error:", err.stack);
+  res.status(500).json({ success: false, message: "Internal Server Error", error: err.message });
+});
+
 export default app
